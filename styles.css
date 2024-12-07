@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8ecdb;
+}
+
+.header {
+  display: flex;
+  background-color: #f3ddbe;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.header__name {
+  margin-left: 5vw;
+  font-family: "Playwrite NG Modern", cursive;
+  font-size: 20px;
+}
+
+.header__nav ul {
+  margin-right: 5vw;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 5vw;
+  text-decoration: none;
+  font-family: "Playwrite NG Modern", cursive;
+}
+
+.header__nav-link:hover {
+  opacity: 0.7;
+}
+
+.header__nav-link {
+  padding: 3px;
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+
+.main__inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.main__inicio-bv {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
+
+.main__inicio-bvt {
+  padding: 5px;
+  background-color: #dfcfbc;
+  border-radius: 7px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main__inicio-t {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 450;
+}
+
+.main__inicio-img {
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 1s;
+}
+
+.main__inicio-td {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: 30px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 100vw;
+  height: 100%;
+  background-color: #e2c099;
+}
+
+.footer__contactanos {
+  padding-top: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+.footer__formulario {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main__inicio-carrusel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slick-arrow {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e2c099;
+  padding: 10px 28px;
+  margin: 10px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.slick-prev {
+  background-image: url(left.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px;
+}
+
+.slick-next {
+  background-image: url(right.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  .footer {
+    font-size: 14px;
+  }
+  .burger-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    transition: 0.3s ease;
+    z-index: 30;
+    right: 20px;
+  }
+
+  .burger-menu::before,
+  .burger-menu::after {
+    content: ""; /* contenido vacío */
+    background: #fff; /* el color de la hamburguesa */
+    position: absolute; /* el valor de posición para todo el bloque */
+    width: 100%;
+    height: 2px; /* el grosor de las líneas de las hamburguesas */
+    transition: 0.3s ease;
+  }
+
+  .burger-menu::before {
+    top: 0; /* la posición del "bollo" superior de la hamburguesa */
+  }
+
+  .burger-menu span {
+    /* dibujaremos la "hamburguesa" con el elemento span */
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    top: 9px;
+    height: 2px;
+    z-index: 30;
+  }
+
+  .burger-menu::after {
+    bottom: 0; /* la posición del "bollo" inferior de la hamburguesa */
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: #f3ddbe;
+    border: 1px solid #fff;
+    padding: 20px 10px;
+    transform: translateX(100%);
+  }
+
+  .header__nav.active {
+    transform: translateX(0);
+    transition: 0.3s ease;
+    z-index: 30;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .burger-menu.active {
+    z-index: 40;
+    transition: 0.3s ease;
+  }
+
+  .burger-menu.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+    transition: 0.3s ease;
+  }
+  .burger-menu.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+    transition: 0.3s ease;
+  }
+
+  .burger-menu.active span {
+    transform: scale(0);
+  }
+}

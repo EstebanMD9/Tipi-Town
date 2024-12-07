@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipi Town</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__name">Tipi Town</div>
+      <div class="burger-menu">
+        <span></span>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a class="header__nav-link" href="#Inicio">Inicio</a></li>
+          <li><a class="header__nav-link" href="#contactanos">Contáctanos</a></li>
+          <li><a class="header__nav-link" href="#Tipis">Tipis</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="main__inicio" id="Inicio">
+        <h1 class="main__inicio-bv">
+          ¡Bienvenidos a Tipi Town, donde tus celebraciones se vuelven únicas y
+          memorables!
+        </h1>
+        <p class="main__inicio-bvt">
+          Transforma cualquier ocasión en un evento extraordinario alquilando
+          nuestros tipis. Desde cumpleaños y aniversarios hasta baby showers y
+          pedidas de mano, ofrecemos ambientes únicos y personalizados para cada
+          celebración. <br />
+          Elige entre estilos como Picnic, Romántico e Infantill, Clásico y crea
+          el ambiente perfecto con la decoración de tu elección.
+        </p>
+      </section>
+      <section class="main__tipis">
+        <h1 class="main__inicio-t" id="Tipis">Tipis</h1>
+        <div class="main__inicio-carrusel">
+          <img
+            id="img1"
+            class="main__inicio-img"
+            src="Tipi.jpg"
+            alt="imagen de Tipi"
+          />
+          <img
+            id="img2"
+            class="main__inicio-img"
+            src="Tipi2.jpg"
+            alt="imagen de Tipi2"
+          />
+          <img
+            id="img4"
+            class="main__inicio-img"
+            src="Tipi4.jpg"
+            alt="imagen de Tipi4"
+          />
+        </div>
+        <p class="main__inicio-td">
+          ¡Déjanos hacer de tu próxima celebración algo inolvidable, incluso si
+          no es una fecha especial! Descubre la magia de Tipi Town y
+          reserva hoy mismo."
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <section id="contactanos" class="footer__contactanos">
+        <p>Contáctanos</p>
+        <p>Num.telefono: 12345678</p>
+        <p>Correo: asdasd@gmail.com</p>
+      </section>
+      <section class="footer__formulario">
+        <form action="https://echo.htmlacademy.ru/">
+          <h1>¡Registrate en este formulario!</h1>
+          <label for="pnombre">Primer nombre:</label><br />
+          <input type="text" id="pnombre" /><br />
+          <label for="snombre">Segundo nombre:</label><br />
+          <input type="text" id="snombre" /><br />
+          <label for="email">e-mail:</label><br />
+          <input type="email" /><br />
+          <input type="reset" value="Submit" />
+        </form>
+      </section>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+      $(".main__inicio-carrusel").slick({
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        prevArrow: '<button type="button" class="slick-custom-arrow slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-custom-arrow slick-next"></button>',
+        responsive: [
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+    <script src="burgerMenu.js"></script>
+  </body>
+</html>
